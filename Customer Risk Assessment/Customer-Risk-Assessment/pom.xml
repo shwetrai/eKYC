@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ekyc</groupId>
+        <groupId>ekyc001</groupId>
         <artifactId>customerRiskAssessment</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>ekyc</groupId>
+    <groupId>ekyc001</groupId>
     <artifactId>customer-Risk-Assessment</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
@@ -37,7 +37,7 @@
 
 <dependencies>
         <dependency>
-            <groupId>ekyc</groupId>
+            <groupId>ekyc001</groupId>
             <artifactId>riskAssessmentModel</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>

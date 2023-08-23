@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="ekyc:customer-Risk-Assessment" ruleAppVersion="LATEST-SNAPSHOT" packageName="ekyc.customer_risk_assessment" managingXom="true">
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="ekyc001:customer-Risk-Assessment" ruleAppVersion="LATEST-SNAPSHOT" packageName="ekyc.customer_risk_assessment" managingXom="true">
   <name>Customer-Risk-Assessment</name>
   <uuid>2250e216-5379-41b5-a348-1d59d0118c4d</uuid>
   <locales>en_US</locales>

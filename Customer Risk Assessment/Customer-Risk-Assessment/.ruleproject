@@ -8,7 +8,7 @@
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="RiskAssessmentModel" packageId="ekyc:riskAssessmentModel" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="ekyc001:riskAssessmentModel#LATEST-SNAPSHOT" packageId="ekyc001:riskAssessmentModel" version="LATEST-SNAPSHOT"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
