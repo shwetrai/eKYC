@@ -12,7 +12,7 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the non-personal geography of 'the risk assessment data' is <a string> ]]></Text>
+                        <Text><![CDATA[the non-personal-geography-type of 'the risk assessment data' is <a string> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -3191,6 +3191,7 @@
             <Data Name="Definitions(A0)#Width"><![CDATA[346]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Risk Weight]]></Data>
             <Data Name="Definitions(C1)#Width"><![CDATA[451]]></Data>
+            <Data Name="Definitions(C1)[0]#HeaderText"><![CDATA[a string]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

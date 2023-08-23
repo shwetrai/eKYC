@@ -33,7 +33,7 @@
                 </RuleList>
             </RuleTask>
             <ActionTask Identifier="task_6">
-                <Actions Language="bal"><![CDATA[set the customer risk assessment score of 'the risk assessment data' to  ('the entity type risk score'+'the geo type risk score'+'the industry type risk score' ) ;]]></Actions>
+                <Actions Language="bal"><![CDATA[set the customer-risk-assessment-score of 'the risk assessment data' to  ('the entity type risk score'+'the geo type risk score'+'the industry type risk score' ) ;]]></Actions>
             </ActionTask>
             <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_7" Ordering="Default">
                 <RuleList>

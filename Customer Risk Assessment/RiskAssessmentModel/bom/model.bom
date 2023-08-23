@@ -7,31 +7,31 @@ public class RiskAssessmentData
         property "com.fasterxml.jackson.annotation.JsonTypeName" "riskAssessmentData"
         property "de.generated" "true"
 {
-    public string customerRiskAssessmentRating
+    public string customer$risk$assessment$rating
                 property "ads.attributeId" "1"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "customerRiskAssessmentRating"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "customer-risk-assessment-rating"
                 property update "true";
-    public double customerRiskAssessmentScore
+    public double customer$risk$assessment$score
                 property "ads.attributeId" "2"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "customerRiskAssessmentScore"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "customer-risk-assessment-score"
                 property update "true";
-    public string non$personalEntityType
+    public string non$personal$entity$type
                 property "ads.attributeId" "3"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalEntityType"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personal-entity-type"
                 property update "true";
-    public string non$personalGeography
+    public string non$personal$geography$type
                 property "ads.attributeId" "4"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalGeography"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personal-geography-type"
                 property update "true";
-    public string non$personalIndustryType
+    public string non$personal$industry$type
                 property "ads.attributeId" "5"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalIndustryType"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personal-industry-type"
                 property update "true";
-    public RiskAssessmentData(string customerRiskAssessmentRating, 
-        double customerRiskAssessmentScore, 
-        string non$personalIndustryType, 
-        string non$personalEntityType, 
-        string non$personalGeography)
+    public RiskAssessmentData(string customer$risk$assessment$rating, 
+        double customer$risk$assessment$score, 
+        string non$personal$entity$type, 
+        string non$personal$geography$type, 
+        string non$personal$industry$type)
                 property autoExpand "true"
                 property beanConstructor "true"
                 property groups "BALA"

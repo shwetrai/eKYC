@@ -19,12 +19,12 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A2">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set the customer risk assessment score of 'the risk assessment data' to <a number>]]></Text>
+                        <Text><![CDATA[set the customer-risk-assessment-score of 'the risk assessment data' to <a number>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set the customer risk assessment rating of 'the risk assessment data' to <a string>]]></Text>
+                        <Text><![CDATA[set the customer-risk-assessment-rating of 'the risk assessment data' to <a string>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -88,6 +88,8 @@
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Indistry Risk Weight]]></Data>
+            <Data Name="Definitions(A2)[0]#HeaderText"><![CDATA[a number]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a string]]></Data>
             <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a string]]></Data>
             <Data Name="Definitions(A2)#HeaderText"><![CDATA[Score]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Rating]]></Data>
