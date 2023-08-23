@@ -2,7 +2,10 @@
 <com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="Customer-Risk-Assessment" usingRuleflow="true" ruleflowName="RiskAssessmentFlow" targetRuleProjectName="Customer-Risk-Assessment">
   <name>Customer-Risk-Assessment</name>
   <uuid>1154eae4-16a4-4d0b-af8b-900f7ee8d00a</uuid>
-  <referencedVariables variableName="riskAssessmentData" variableSetName="Risk Assessment Data" direction="IN_OUT">
+  <referencedVariables variableName="npEntityTypeRiskWeight" variableSetName="Risk Assessment Data">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="npIndustryTypeRiskWeight" variableSetName="Risk Assessment Data" direction="OUT">
     <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
   </referencedVariables>
   <ruleflow href="../rules/RiskAssessmentFlow.rfl#5e915bcc-5725-4a57-ba0e-103696a7e00e"/>
