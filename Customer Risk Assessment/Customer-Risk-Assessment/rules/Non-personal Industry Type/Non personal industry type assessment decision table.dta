@@ -12,7 +12,7 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the non-personal-industry-type of 'the risk assessment data' is <a string> ]]></Text>
+                        <Text><![CDATA['the non-personal-industry-type' is <a string> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>

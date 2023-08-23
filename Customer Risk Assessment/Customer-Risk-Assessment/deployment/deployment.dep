@@ -3,8 +3,14 @@
   <name>Customer-Risk-Assessment</name>
   <uuid>2250e216-5379-41b5-a348-1d59d0118c4d</uuid>
   <locales>en_US</locales>
-  <operations operationName="Customer-Risk-Assessment">
-    <operation href="Customer-Risk-Assessment.dop#1154eae4-16a4-4d0b-af8b-900f7ee8d00a"/>
+  <operations operationName="Risk Assessment">
+    <operation href="Risk%20Assessment.dop#13af1502-4c94-419b-9a43-e3384a0d784f"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <operations operationName="function">
+    <operation href="function.dop#5e90bb0f-660e-4683-b417-5dc43ac95a05"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="Customer-Risk-Assessment" usingRuleflow="true" ruleflowName="RiskAssessmentFlow" targetRuleProjectName="Customer-Risk-Assessment">
-  <name>Customer-Risk-Assessment</name>
-  <uuid>1154eae4-16a4-4d0b-af8b-900f7ee8d00a</uuid>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="function" usingRuleflow="true" ruleflowName="RiskAssessmentFlow" targetRuleProjectName="Customer-Risk-Assessment">
+  <name>Risk Assessment</name>
+  <uuid>13af1502-4c94-419b-9a43-e3384a0d784f</uuid>
+  <description><![CDATA[]]></description>
   <referencedVariables variableName="nonPersonalEntityType" variableSetName="Risk Assessment Data">
     <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
   </referencedVariables>
@@ -20,12 +21,9 @@
   <ruleflow href="../rules/RiskAssessmentFlow.rfl#5e915bcc-5725-4a57-ba0e-103696a7e00e"/>
   <targetRuleProject href="../../Customer-Risk-Assessment#82975400-88c1-46a1-a346-23eff77025fd"/>
   <tags key="operationDescription">
-    <value><![CDATA[""]]></value>
-  </tags>
-  <tags key="operationName">
-    <value><![CDATA["Customer-Risk-Assessment-Customer-Risk-Assessment"]]></value>
+    <value><![CDATA[]]></value>
   </tags>
   <tags key="exposedAtRuntime">
-    <value><![CDATA[true]]></value>
+    <value><![CDATA[false]]></value>
   </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

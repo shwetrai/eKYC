@@ -2,7 +2,6 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
   <name>Risk Assessment Data</name>
   <uuid>7a8a37b2-d757-4527-8750-75d0bda1be7a</uuid>
-  <variables name="riskAssessmentData" type="ekyc.riskassessmentmodel.RiskAssessmentData" initialValue="" verbalization="the risk assessment data" jsonName=""/>
   <variables name="npEntityTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the entity type risk weight" jsonName=""/>
   <variables name="npIndustryTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the industry type risk weight" jsonName=""/>
   <variables name="npGeoTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the geo type risk weight" jsonName=""/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="function" usingRuleflow="true" ruleflowName="RiskAssessmentFlow" targetRuleProjectName="Customer-Risk-Assessment">
+  <name>function</name>
+  <uuid>5e90bb0f-660e-4683-b417-5dc43ac95a05</uuid>
+  <ruleflow href="../rules/RiskAssessmentFlow.rfl#5e915bcc-5725-4a57-ba0e-103696a7e00e"/>
+  <targetRuleProject href="../../Customer-Risk-Assessment#82975400-88c1-46a1-a346-23eff77025fd"/>
+  <tags key="operationDescription">
+    <value><![CDATA[]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>
