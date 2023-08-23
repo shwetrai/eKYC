@@ -1,0 +1,16 @@
+
+# ekyc.riskassessmentmodel.RiskAssessmentData
+ekyc.riskassessmentmodel.RiskAssessmentData#concept.label = risk assessment data
+ekyc.riskassessmentmodel.RiskAssessmentData.RiskAssessmentData(java.lang.String,double,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {risk assessment data} where {0, customer risk assessment rating} {1, customer risk assessment score} {2, non-personal industry type} {3, non-personal entity type} {4, non-personal geography}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentRating#phrase.action = set the customer risk assessment rating of {this} to {customer risk assessment rating}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentRating#phrase.navigation = {customer risk assessment rating} of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentScore#phrase.action = set the customer risk assessment score of {this} to {customer risk assessment score}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentScore#phrase.addition_setter = add {customer risk assessment score} to the customer risk assessment score of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentScore#phrase.navigation = {customer risk assessment score} of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.customerRiskAssessmentScore#phrase.subtraction_setter = subtract {customer risk assessment score} from the customer risk assessment score of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalEntityType#phrase.action = set the non-personal entity type of {this} to {non-personal entity type}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalEntityType#phrase.navigation = {non-personal entity type} of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalGeography#phrase.action = set the non-personal geography of {this} to {non-personal geography}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalGeography#phrase.navigation = {non-personal geography} of {this}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalIndustryType#phrase.action = set the non-personal industry type of {this} to {non-personal industry type}
+ekyc.riskassessmentmodel.RiskAssessmentData.non$personalIndustryType#phrase.navigation = {non-personal industry type} of {this}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Non-personal Entity Type</name>
+  <uuid>72c67a34-98de-474f-ad4d-6d88db2c9165</uuid>
+</ilog.rules.studio.model.base:RulePackage>

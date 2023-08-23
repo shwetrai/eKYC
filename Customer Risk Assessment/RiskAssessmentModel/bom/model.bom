@@ -1,0 +1,42 @@
+
+package ekyc.riskassessmentmodel;
+
+
+public class RiskAssessmentData
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "riskAssessmentData"
+        property "de.generated" "true"
+{
+    public string customerRiskAssessmentRating
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "customerRiskAssessmentRating"
+                property update "true";
+    public double customerRiskAssessmentScore
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "customerRiskAssessmentScore"
+                property update "true";
+    public string non$personalEntityType
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalEntityType"
+                property update "true";
+    public string non$personalGeography
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalGeography"
+                property update "true";
+    public string non$personalIndustryType
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "non-personalIndustryType"
+                property update "true";
+    public RiskAssessmentData(string customerRiskAssessmentRating, 
+        double customerRiskAssessmentScore, 
+        string non$personalIndustryType, 
+        string non$personalEntityType, 
+        string non$personalGeography)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public RiskAssessmentData()
+                property "dataio.default" "true";
+}
+

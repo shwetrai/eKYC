@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Non-personal Geography Type</name>
+  <uuid>bc2f15e3-5ca2-4730-b78d-7ea95083f95a</uuid>
+</ilog.rules.studio.model.base:RulePackage>
