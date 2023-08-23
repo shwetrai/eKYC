@@ -21,9 +21,12 @@
   <ruleflow href="../rules/RiskAssessmentFlow.rfl#5e915bcc-5725-4a57-ba0e-103696a7e00e"/>
   <targetRuleProject href="../../Customer-Risk-Assessment#82975400-88c1-46a1-a346-23eff77025fd"/>
   <tags key="operationDescription">
-    <value><![CDATA[]]></value>
+    <value><![CDATA[""]]></value>
   </tags>
   <tags key="exposedAtRuntime">
-    <value><![CDATA[false]]></value>
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Customer-Risk-Assessment-Risk Assessment"]]></value>
   </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
