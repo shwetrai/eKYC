@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>Risk Model Threshold decision table</name>
-  <uuid>91c11344-03c3-4c6c-bd7d-8314352b68bb</uuid>
+  <name>Entity Risk Score for Exceptional case</name>
+  <uuid>2eb2679c-047d-4cf1-8d1f-96aea7bda6e5</uuid>
   <locale>en_US</locale>
   <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
     <Body>
@@ -12,14 +12,19 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the customer risk assessment score of 'the risk assessment data' ≥  <a number> and the customer risk assessment score of 'the risk assessment data' ≤ <a number> ]]></Text>
+                        <Text><![CDATA['the entity type risk weight' is <a string>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set the customer risk assessment score of 'the risk assessment data' to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set the customer risk assessment rating of 'the risk assessment data' to <a string> ]]></Text>
+                        <Text><![CDATA[set the customer risk assessment rating of 'the risk assessment data' to <a string>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -28,39 +33,51 @@
             <Partition DefId="C0">
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[0]]></Param>
-                        <Param><![CDATA[164]]></Param>
+                        <Param><![CDATA["AUTO-HIGH"]]></Param>
                     </Expression>
                     <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA[2500]]></Param>
+                            </Expression>
+                        </Action>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["LOW"]]></Param>
+                                <Param><![CDATA["AUTO-HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[165]]></Param>
-                        <Param><![CDATA[230]]></Param>
+                        <Param><![CDATA["REFER-SANCTIONS"]]></Param>
                     </Expression>
                     <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA[20000]]></Param>
+                            </Expression>
+                        </Action>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["MEDIUM"]]></Param>
+                                <Param><![CDATA["REFER SANCTION"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[231]]></Param>
-                        <Param><![CDATA[999999]]></Param>
+                        <Param><![CDATA["REFER-PROHIBITED"]]></Param>
                     </Expression>
                     <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA[85000]]></Param>
+                            </Expression>
+                        </Action>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["HIGH"]]></Param>
+                                <Param><![CDATA["REFER PROHIBITED"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -70,12 +87,10 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Score]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[326]]></Data>
-            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a number]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Entity Risk Weight]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a string]]></Data>
+            <Data Name="Definitions(A2)#HeaderText"><![CDATA[Score]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Rating]]></Data>
-            <Data Name="Definitions(C0)#Width"><![CDATA[340]]></Data>
-            <Data Name="Definitions(C0)[1]#HeaderText"><![CDATA[a number]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

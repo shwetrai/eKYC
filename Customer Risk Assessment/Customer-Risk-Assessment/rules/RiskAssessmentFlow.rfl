@@ -24,7 +24,7 @@
             </RuleTask>
             <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_4" Ordering="Default">
                 <RuleList>
-                    <Rule Uuid="55f592ac-473f-4fe2-ab05-3a14dd234a59"/>
+                    <Rule Uuid="80464d69-02c4-4675-ba09-eacc63e837c9"/>
                 </RuleList>
             </RuleTask>
             <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_5" Ordering="Default">
@@ -40,6 +40,11 @@
                     <Rule Uuid="91c11344-03c3-4c6c-bd7d-8314352b68bb"/>
                 </RuleList>
             </RuleTask>
+            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_8" Ordering="Default">
+                <RuleList>
+                    <Rule Uuid="2eb2679c-047d-4cf1-8d1f-96aea7bda6e5"/>
+                </RuleList>
+            </RuleTask>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -50,12 +55,13 @@
             <TaskNode Identifier="node_5" Task="task_5"/>
             <TaskNode Identifier="node_6" Task="task_6"/>
             <TaskNode Identifier="node_7" Task="task_7"/>
+            <TaskNode Identifier="node_8" Task="task_8"/>
         </NodeList>
         <TransitionList>
             <Transition Identifier="transition_0" Source="node_0" Target="node_1"/>
             <Transition Identifier="transition_2" Source="node_1" Target="node_3"/>
             <Transition Identifier="transition_3" Source="node_1" Target="node_4">
-                <Conditions Language="bal"><![CDATA['the industry type risk weight' is "AUTO-HIGH"]]></Conditions>
+                <Conditions Language="bal"><![CDATA['the industry type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
             </Transition>
             <Transition Identifier="transition_4" Source="node_1" Target="node_5">
                 <Conditions Language="bal"><![CDATA['the geo type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" }]]></Conditions>
@@ -65,6 +71,10 @@
             <Transition Identifier="transition_7" Source="node_3" Target="node_6"/>
             <Transition Identifier="transition_8" Source="node_6" Target="node_7"/>
             <Transition Identifier="transition_9" Source="node_7" Target="node_2"/>
+            <Transition Identifier="transition_10" Source="node_1" Target="node_8">
+                <Conditions Language="bal"><![CDATA['the entity type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_11" Source="node_8" Target="node_2"/>
         </TransitionList>
     </Body>
     <Resources>
@@ -82,6 +92,8 @@
             <Data Name="node_3#label"><![CDATA[Risk Contribution ]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
             <Data Name="node_4#label"><![CDATA[Industry Exception]]></Data>
+            <Data Name="node_8#label"><![CDATA[Entity Exception]]></Data>
+            <Data Name="node_8#name"><![CDATA[Entity Exception]]></Data>
             <Data Name="node_3#name"><![CDATA[Risk Contribution ]]></Data>
         </ResourceSet>
     </Resources>

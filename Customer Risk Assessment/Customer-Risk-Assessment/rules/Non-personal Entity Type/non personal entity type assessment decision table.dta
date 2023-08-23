@@ -6,20 +6,20 @@
   <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
     <Body>
         <Properties>
-            <Property Name="UI.MediaType">Web</Property>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
         </Properties>
         <Structure>
             <ConditionDefinitions>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
-                        <Text>the non-personal entity type of 'the risk assessment data' is &lt;a string&gt;</Text>
+                        <Text><![CDATA[the non-personal entity type of 'the risk assessment data' is <a string>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text>set 'the entity type risk weight' to &lt;a string&gt;</Text>
+                        <Text><![CDATA[set 'the entity type risk weight' to <a string>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -28,168 +28,168 @@
             <Partition DefId="C1">
                 <Condition>
                     <Expression>
-                        <Param>"Private Limited Company"</Param>
+                        <Param><![CDATA["Private Limited Company"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"MEDIUM"</Param>
+                                <Param><![CDATA["MEDIUM"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Sole Trader"</Param>
+                        <Param><![CDATA["Sole Trader"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"MEDIUM"</Param>
+                                <Param><![CDATA["MEDIUM"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Limited Liability Partnership"</Param>
+                        <Param><![CDATA["Limited Liability Partnership"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"MEDIUM"</Param>
+                                <Param><![CDATA["MEDIUM"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Clubs"</Param>
+                        <Param><![CDATA["Clubs"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Charity"</Param>
+                        <Param><![CDATA["Charity"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Association / Society"</Param>
+                        <Param><![CDATA["Association / Society"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Public Limited Company (PLC)"</Param>
+                        <Param><![CDATA["Public Limited Company (PLC)"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"MEDIUM"</Param>
+                                <Param><![CDATA["MEDIUM"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Partnership"</Param>
+                        <Param><![CDATA["Partnership"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Trust"</Param>
+                        <Param><![CDATA["Trust"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Pension Schemes"</Param>
+                        <Param><![CDATA["Pension Schemes"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"LOW"</Param>
+                                <Param><![CDATA["LOW"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Public Sector Bodies"</Param>
+                        <Param><![CDATA["Public Sector Bodies"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"LOW"</Param>
+                                <Param><![CDATA["LOW"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Outlet"</Param>
+                        <Param><![CDATA["Outlet"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Data Not Recognised"</Param>
+                        <Param><![CDATA["Data Not Recognised"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["HIGH"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param>"Missing Data"</Param>
+                        <Param><![CDATA["Test"]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param>"HIGH"</Param>
+                                <Param><![CDATA["REFER-PROHIBITED"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -199,8 +199,10 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C1)#HeaderText">Description</Data>
-            <Data Name="Definitions(A0)#HeaderText">Risk Weight</Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Description]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[278]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Risk Weight]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[290]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

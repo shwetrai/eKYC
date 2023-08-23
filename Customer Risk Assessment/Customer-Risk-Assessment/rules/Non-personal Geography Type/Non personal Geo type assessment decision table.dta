@@ -1365,7 +1365,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["HIGH"]]></Param>
+                                <Param><![CDATA["MEDIUM"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -3188,7 +3188,9 @@
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C1)#HeaderText"><![CDATA[Geography]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[346]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Risk Weight]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[451]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

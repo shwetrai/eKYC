@@ -5,6 +5,24 @@
   <referencedVariables variableName="riskAssessmentData" variableSetName="Risk Assessment Data" direction="IN_OUT">
     <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
   </referencedVariables>
+  <referencedVariables variableName="npEntityTypeRiskWeight" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="npIndustryTypeRiskWeight" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="npGeoTypeRiskWeight" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="entityTypeRiskScore" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="industryTypeRiskScore" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
+  <referencedVariables variableName="geoTypeRiskScore" variableSetName="Risk Assessment Data" direction="OUT">
+    <variableSet href="../rules/Risk%20Assessment%20Data.var#7a8a37b2-d757-4527-8750-75d0bda1be7a"/>
+  </referencedVariables>
   <ruleflow href="../rules/RiskAssessmentFlow.rfl#5e915bcc-5725-4a57-ba0e-103696a7e00e"/>
   <targetRuleProject href="../../Customer-Risk-Assessment#82975400-88c1-46a1-a346-23eff77025fd"/>
   <tags key="operationDescription">
