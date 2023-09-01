@@ -54,6 +54,10 @@ set 'the industry type risk score' to 0;
 set 'the industry type risk weight' to "" ;
 ]]></Actions>
             </ActionTask>
+            <ActionTask Identifier="task_10">
+                <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-rating' to "Error! Please check the input values" ; 
+set 'the customer-risk-assessment-score' to 0;]]></Actions>
+            </ActionTask>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -66,9 +70,10 @@ set 'the industry type risk weight' to "" ;
             <TaskNode Identifier="node_7" Task="task_7"/>
             <TaskNode Identifier="node_8" Task="task_8"/>
             <TaskNode Identifier="node_9" Task="task_9"/>
+            <BranchNode Identifier="node_10"/>
+            <TaskNode Identifier="node_11" Task="task_10"/>
         </NodeList>
         <TransitionList>
-            <Transition Identifier="transition_2" Source="node_1" Target="node_3"/>
             <Transition Identifier="transition_3" Source="node_1" Target="node_4">
                 <Conditions Language="bal"><![CDATA['the industry type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
             </Transition>
@@ -86,17 +91,27 @@ set 'the industry type risk weight' to "" ;
             <Transition Identifier="transition_11" Source="node_8" Target="node_2"/>
             <Transition Identifier="transition_13" Source="node_9" Target="node_1"/>
             <Transition Identifier="transition_14" Source="node_0" Target="node_9"/>
+            <Transition Identifier="transition_12" Source="node_10" Target="node_3"/>
+            <Transition Identifier="transition_15" Source="node_1" Target="node_10"/>
+            <Transition Identifier="transition_16" Source="node_10" Target="node_11">
+                <Conditions Language="bal"><![CDATA[('the entity type risk score' is 0 and 'the entity type risk weight' is "") or
+('the geo type risk score' is 0 and'the geo type risk weight' is "" ) or
+('the industry type risk score' is 0 and'the industry type risk weight' is "")]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_17" Source="node_11" Target="node_2"/>
         </TransitionList>
     </Body>
     <Resources>
         <ResourceSet Locale="en_US">
+            <Data Name="node_11#label"><![CDATA[Set Error Response]]></Data>
             <Data Name="node_7#label"><![CDATA[Risk Rating Decision]]></Data>
             <Data Name="node_5#name"><![CDATA[Geography Exception]]></Data>
             <Data Name="node_1#name"><![CDATA[Risk Weight Assessment]]></Data>
             <Data Name="node_2#name"><![CDATA[End node]]></Data>
             <Data Name="node_5#label"><![CDATA[Geography Exception]]></Data>
+            <Data Name="node_10#label"><![CDATA[Is Any Value Missing?]]></Data>
+            <Data Name="node_10#name"><![CDATA[Is Any Value Missing?]]></Data>
             <Data Name="transition_4#documentation"><![CDATA[Geo]]></Data>
-            <Data Name="transition_2#documentation"><![CDATA[Else]]></Data>
             <Data Name="node_4#name"><![CDATA[Industry Exception]]></Data>
             <Data Name="node_1#label"><![CDATA[Risk Weight Assessment]]></Data>
             <Data Name="node_6#label"><![CDATA[Calculate Risk Score]]></Data>
@@ -108,6 +123,8 @@ set 'the industry type risk weight' to "" ;
             <Data Name="node_4#label"><![CDATA[Industry Exception]]></Data>
             <Data Name="node_9#label"><![CDATA[InIt]]></Data>
             <Data Name="node_8#label"><![CDATA[Entity Exception]]></Data>
+            <Data Name="node_10#documentation"><![CDATA[This is when user provide input which are not configured ]]></Data>
+            <Data Name="node_11#name"><![CDATA[Set Error Response]]></Data>
             <Data Name="node_8#name"><![CDATA[Entity Exception]]></Data>
             <Data Name="node_3#name"><![CDATA[Risk Contribution ]]></Data>
         </ResourceSet>
