@@ -22,27 +22,12 @@
                     <Rule Uuid="2f1fc6f5-5685-4d01-bd4a-28298f5249d5"/>
                 </RuleList>
             </RuleTask>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_4" Ordering="Default">
-                <RuleList>
-                    <Rule Uuid="80464d69-02c4-4675-ba09-eacc63e837c9"/>
-                </RuleList>
-            </RuleTask>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_5" Ordering="Default">
-                <RuleList>
-                    <Rule Uuid="6a37b107-23dc-4cf9-90cd-d1a5015f8b48"/>
-                </RuleList>
-            </RuleTask>
             <ActionTask Identifier="task_6">
                 <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-score' to  ('the entity type risk score'+'the geo type risk score'+'the industry type risk score' ) ;]]></Actions>
             </ActionTask>
             <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_7" Ordering="Default">
                 <RuleList>
                     <Rule Uuid="91c11344-03c3-4c6c-bd7d-8314352b68bb"/>
-                </RuleList>
-            </RuleTask>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_8" Ordering="Default">
-                <RuleList>
-                    <Rule Uuid="2eb2679c-047d-4cf1-8d1f-96aea7bda6e5"/>
                 </RuleList>
             </RuleTask>
             <ActionTask Identifier="task_9">
@@ -58,37 +43,30 @@ set 'the industry type risk weight' to "" ;
                 <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-rating' to "Error! Please check the input values" ; 
 set 'the customer-risk-assessment-score' to 0;]]></Actions>
             </ActionTask>
+            <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_11" Ordering="Default">
+                <RuleList>
+                    <Rule Uuid="65dcf2b5-c81f-4e38-ac7a-b6449564019d"/>
+                    <Rule Uuid="4947dc10-37e8-41ab-93ed-9162b2fde62d"/>
+                    <Rule Uuid="f972cbce-6f04-45cc-8194-b6e52c8208dc"/>
+                </RuleList>
+            </RuleTask>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
             <TaskNode Identifier="node_1" Task="task_1"/>
             <TaskNode Identifier="node_2" Task="task_2"/>
             <TaskNode Identifier="node_3" Task="task_3"/>
-            <TaskNode Identifier="node_4" Task="task_4"/>
-            <TaskNode Identifier="node_5" Task="task_5"/>
             <TaskNode Identifier="node_6" Task="task_6"/>
             <TaskNode Identifier="node_7" Task="task_7"/>
-            <TaskNode Identifier="node_8" Task="task_8"/>
             <TaskNode Identifier="node_9" Task="task_9"/>
             <BranchNode Identifier="node_10"/>
             <TaskNode Identifier="node_11" Task="task_10"/>
+            <TaskNode Identifier="node_12" Task="task_11"/>
         </NodeList>
         <TransitionList>
-            <Transition Identifier="transition_3" Source="node_1" Target="node_4">
-                <Conditions Language="bal"><![CDATA['the industry type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
-            </Transition>
-            <Transition Identifier="transition_4" Source="node_1" Target="node_5">
-                <Conditions Language="bal"><![CDATA['the geo type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" }]]></Conditions>
-            </Transition>
-            <Transition Identifier="transition_5" Source="node_5" Target="node_2"/>
-            <Transition Identifier="transition_6" Source="node_4" Target="node_2"/>
             <Transition Identifier="transition_7" Source="node_3" Target="node_6"/>
             <Transition Identifier="transition_8" Source="node_6" Target="node_7"/>
             <Transition Identifier="transition_9" Source="node_7" Target="node_2"/>
-            <Transition Identifier="transition_10" Source="node_1" Target="node_8">
-                <Conditions Language="bal"><![CDATA['the entity type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
-            </Transition>
-            <Transition Identifier="transition_11" Source="node_8" Target="node_2"/>
             <Transition Identifier="transition_13" Source="node_9" Target="node_1"/>
             <Transition Identifier="transition_14" Source="node_0" Target="node_9"/>
             <Transition Identifier="transition_12" Source="node_10" Target="node_3"/>
@@ -99,33 +77,36 @@ set 'the customer-risk-assessment-score' to 0;]]></Actions>
 ('the industry type risk score' is 0 and'the industry type risk weight' is "")]]></Conditions>
             </Transition>
             <Transition Identifier="transition_17" Source="node_11" Target="node_2"/>
+            <Transition Identifier="transition_18" Source="node_1" Target="node_12">
+                <Conditions Language="bal"><![CDATA['the geo type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } or  
+
+'the entity type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } or
+
+'the industry type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_19" Source="node_12" Target="node_2"/>
         </TransitionList>
     </Body>
     <Resources>
         <ResourceSet Locale="en_US">
             <Data Name="node_11#label"><![CDATA[Set Error Response]]></Data>
             <Data Name="node_7#label"><![CDATA[Risk Rating Decision]]></Data>
-            <Data Name="node_5#name"><![CDATA[Geography Exception]]></Data>
             <Data Name="node_1#name"><![CDATA[Risk Weight Assessment]]></Data>
             <Data Name="node_2#name"><![CDATA[End node]]></Data>
-            <Data Name="node_5#label"><![CDATA[Geography Exception]]></Data>
             <Data Name="node_10#label"><![CDATA[Is Any Value Missing?]]></Data>
             <Data Name="node_10#name"><![CDATA[Is Any Value Missing?]]></Data>
-            <Data Name="transition_4#documentation"><![CDATA[Geo]]></Data>
-            <Data Name="node_4#name"><![CDATA[Industry Exception]]></Data>
             <Data Name="node_1#label"><![CDATA[Risk Weight Assessment]]></Data>
             <Data Name="node_6#label"><![CDATA[Calculate Risk Score]]></Data>
             <Data Name="node_7#name"><![CDATA[Risk Rating Decision]]></Data>
             <Data Name="node_6#name"><![CDATA[Calculate Risk Score]]></Data>
             <Data Name="node_9#name"><![CDATA[InIt]]></Data>
             <Data Name="node_3#label"><![CDATA[Risk Contribution ]]></Data>
+            <Data Name="node_12#name"><![CDATA[All Exceptional Rule]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
-            <Data Name="node_4#label"><![CDATA[Industry Exception]]></Data>
             <Data Name="node_9#label"><![CDATA[InIt]]></Data>
-            <Data Name="node_8#label"><![CDATA[Entity Exception]]></Data>
             <Data Name="node_10#documentation"><![CDATA[This is when user provide input which are not configured ]]></Data>
             <Data Name="node_11#name"><![CDATA[Set Error Response]]></Data>
-            <Data Name="node_8#name"><![CDATA[Entity Exception]]></Data>
+            <Data Name="node_12#label"><![CDATA[All Exceptional Rule]]></Data>
             <Data Name="node_3#name"><![CDATA[Risk Contribution ]]></Data>
         </ResourceSet>
     </Resources>

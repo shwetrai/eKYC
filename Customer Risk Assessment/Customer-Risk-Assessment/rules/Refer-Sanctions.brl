@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Refer-Sanctions</name>
+  <uuid>4947dc10-37e8-41ab-93ed-9162b2fde62d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	'the geo type risk weight' is "REFER-SANCTIONS" or 'the entity type risk weight' is "REFER-SANCTIONS" or 'the industry type risk weight' is "REFER-SANCTIONS" 
+then
+	set 'the customer-risk-assessment-rating' to "REFER-SANCTIONS" ;
+    set 'the customer-risk-assessment-score' to 20000; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
