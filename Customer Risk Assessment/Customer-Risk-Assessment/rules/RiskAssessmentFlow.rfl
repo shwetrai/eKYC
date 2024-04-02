@@ -23,7 +23,7 @@
                 </RuleList>
             </RuleTask>
             <ActionTask Identifier="task_6">
-                <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-score' to  ('the entity type risk score'+'the geo type risk score'+'the industry type risk score' ) ;]]></Actions>
+                <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-score' to  ( 'the entity type risk score' + 'the geo type risk score' + 'the industry type risk score' ) ;]]></Actions>
             </ActionTask>
             <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_7" Ordering="Default">
                 <RuleList>
@@ -31,17 +31,16 @@
                 </RuleList>
             </RuleTask>
             <ActionTask Identifier="task_9">
-                <Actions Language="bal"><![CDATA[set 'the entity type risk score' to 0;
+                <Actions Language="bal"><![CDATA[set 'the entity type risk score' to 0 ;
 set 'the entity type risk weight' to "" ;
-set 'the geo type risk score' to 0;
+set 'the geo type risk score' to 0 ;
 set 'the geo type risk weight' to "" ;
-set 'the industry type risk score' to 0;
-set 'the industry type risk weight' to "" ;
-]]></Actions>
+set 'the industry type risk score' to 0 ;
+set 'the industry type risk weight' to "" ;]]></Actions>
             </ActionTask>
             <ActionTask Identifier="task_10">
                 <Actions Language="bal"><![CDATA[set 'the customer-risk-assessment-rating' to "Error! Please check the input values" ; 
-set 'the customer-risk-assessment-score' to 0;]]></Actions>
+set 'the customer-risk-assessment-score' to 0 ;]]></Actions>
             </ActionTask>
             <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_11" Ordering="Default">
                 <RuleList>
@@ -72,17 +71,17 @@ set 'the customer-risk-assessment-score' to 0;]]></Actions>
             <Transition Identifier="transition_12" Source="node_10" Target="node_3"/>
             <Transition Identifier="transition_15" Source="node_1" Target="node_10"/>
             <Transition Identifier="transition_16" Source="node_10" Target="node_11">
-                <Conditions Language="bal"><![CDATA[('the entity type risk score' is 0 and 'the entity type risk weight' is "") or
-('the geo type risk score' is 0 and'the geo type risk weight' is "" ) or
-('the industry type risk score' is 0 and'the industry type risk weight' is "")]]></Conditions>
+                <Conditions Language="bal"><![CDATA[( 'the entity type risk score' is 0 and 'the entity type risk weight' is "" ) or
+( 'the geo type risk score' is 0 and 'the geo type risk weight' is "" ) or
+( 'the industry type risk score' is 0 and 'the industry type risk weight' is "" )]]></Conditions>
             </Transition>
             <Transition Identifier="transition_17" Source="node_11" Target="node_2"/>
             <Transition Identifier="transition_18" Source="node_1" Target="node_12">
-                <Conditions Language="bal"><![CDATA['the geo type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } or  
+                <Conditions Language="bal"><![CDATA['the geo type risk weight' is one of { "AUTO-HIGH" , "REFER-SANCTIONS" , "REFER-PROHIBITED" } or  
 
-'the entity type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } or
+'the entity type risk weight' is one of { "AUTO-HIGH" , "REFER-SANCTIONS" , "REFER-PROHIBITED" } or
 
-'the industry type risk weight' is one of { "AUTO-HIGH", "REFER-SANCTIONS", "REFER-PROHIBITED" } ]]></Conditions>
+'the industry type risk weight' is one of { "AUTO-HIGH" , "REFER-SANCTIONS" , "REFER-PROHIBITED" }]]></Conditions>
             </Transition>
             <Transition Identifier="transition_19" Source="node_12" Target="node_2"/>
         </TransitionList>

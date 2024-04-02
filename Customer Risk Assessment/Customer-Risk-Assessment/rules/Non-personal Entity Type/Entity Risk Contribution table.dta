@@ -19,7 +19,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set 'the entity type risk score' to <a number>*0.3]]></Text>
+                        <Text><![CDATA[set 'the entity type risk score' to <a number> * 0.3]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -67,8 +67,8 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Risk]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Score]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Risk]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

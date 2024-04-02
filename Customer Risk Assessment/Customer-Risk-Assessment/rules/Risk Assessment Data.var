@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
+<?xml version="1.0" encoding="UTF-8"?><ilog.rules.studio.model.base:VariableSet xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:xmi="http://www.omg.org/XMI" language="ARL" xmi:version="2.0">
   <name>Risk Assessment Data</name>
   <uuid>7a8a37b2-d757-4527-8750-75d0bda1be7a</uuid>
-  <variables name="npEntityTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the entity type risk weight" jsonName=""/>
-  <variables name="npIndustryTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the industry type risk weight" jsonName=""/>
-  <variables name="npGeoTypeRiskWeight" type="java.lang.String" initialValue="" verbalization="the geo type risk weight" jsonName=""/>
-  <variables name="entityTypeRiskScore" type="java.lang.Double" initialValue="" verbalization="the entity type risk score" jsonName=""/>
-  <variables name="industryTypeRiskScore" type="java.lang.Double" initialValue="" verbalization="the industry type risk score" jsonName=""/>
-  <variables name="geoTypeRiskScore" type="java.lang.Double" initialValue="" verbalization="the geo type risk score" jsonName=""/>
-  <variables name="nonPersonalEntityType" type="java.lang.String" initialValue="" verbalization="the non-personal-entity-type" jsonName=""/>
-  <variables name="nonPersonalGeographyType" type="java.lang.String" initialValue="" verbalization="the non-personal-geography-type" jsonName=""/>
-  <variables name="nonPersonalIndustryType" type="java.lang.String" initialValue="" verbalization="the non-personal-industry-type" jsonName=""/>
-  <variables name="customerRiskAssessmentRating" type="java.lang.String" initialValue="" verbalization="the customer-risk-assessment-rating" jsonName=""/>
-  <variables name="customerRiskAssessmentScore" type="java.lang.Double" initialValue="" verbalization="the customer-risk-assessment-score" jsonName=""/>
+  <variables initialValue="" jsonName="" name="npEntityTypeRiskWeight" type="java.lang.String" verbalization="the entity type risk weight"/>
+  <variables initialValue="" jsonName="" name="npIndustryTypeRiskWeight" type="java.lang.String" verbalization="the industry type risk weight"/>
+  <variables initialValue="" jsonName="" name="npGeoTypeRiskWeight" type="java.lang.String" verbalization="the geo type risk weight"/>
+  <variables initialValue="" jsonName="" name="entityTypeRiskScore" type="double" verbalization="the entity type risk score"/>
+  <variables initialValue="" jsonName="" name="industryTypeRiskScore" type="double" verbalization="the industry type risk score"/>
+  <variables initialValue="" jsonName="" name="geoTypeRiskScore" type="double" verbalization="the geo type risk score"/>
+  <variables initialValue="" jsonName="" name="nonPersonalEntityType" type="java.lang.String" verbalization="the non-personal-entity-type"/>
+  <variables initialValue="" jsonName="" name="nonPersonalGeographyType" type="java.lang.String" verbalization="the non-personal-geography-type"/>
+  <variables initialValue="" jsonName="" name="nonPersonalIndustryType" type="java.lang.String" verbalization="the non-personal-industry-type"/>
+  <variables initialValue="" jsonName="" name="customerRiskAssessmentRating" type="java.lang.String" verbalization="the customer-risk-assessment-rating"/>
+  <variables initialValue="" jsonName="" name="customerRiskAssessmentScore" type="double" verbalization="the customer-risk-assessment-score"/>
 </ilog.rules.studio.model.base:VariableSet>

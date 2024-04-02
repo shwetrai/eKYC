@@ -19,7 +19,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set 'the geo type risk score' to <a number>*0.25]]></Text>
+                        <Text><![CDATA[set 'the geo type risk score' to <a number> * 0.25]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -67,9 +67,9 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Risk]]></Data>
-            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a number]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Score]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a number]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Risk]]></Data>
             <Data Name="Definitions(C1)[0]#HeaderText"><![CDATA[a string]]></Data>
         </ResourceSet>
     </Resources>
